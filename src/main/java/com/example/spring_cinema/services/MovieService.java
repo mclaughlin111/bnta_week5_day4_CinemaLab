@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service // turns this class into a Bean
 public class MovieService {
     @Autowired // "dependency injection"
     MovieRepository movieRepository;
@@ -21,11 +21,14 @@ public class MovieService {
     public void saveMovie(Movie givenMovie){
         movieRepository.save(givenMovie);
     }
+    // should return? void / not void
 
     public Optional<Movie> getMovieById(long id) {
-        assert movieRepository != null;
+//        assert movieRepository != null;
         return movieRepository.findById(id);
     }
+
+
 
 //    public String getMovieByID(){
 //

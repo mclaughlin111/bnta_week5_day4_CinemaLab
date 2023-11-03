@@ -26,7 +26,7 @@ public class MovieController {
     }
 
     // get by ID mapping
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}") //placeholder for what've typed
     public ResponseEntity<Optional<Movie>> getMovieById(@PathVariable long id){
 
         return new ResponseEntity<>(movieService.getMovieById(id), HttpStatus.OK);
@@ -37,6 +37,9 @@ public class MovieController {
         movieService.saveMovie(givenMovie);
         return new ResponseEntity<>(givenMovie, HttpStatus.OK);
     }
+
+    //update mapping
+    @PutMapping
 
 
 

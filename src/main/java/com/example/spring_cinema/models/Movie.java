@@ -9,8 +9,8 @@ import jakarta.persistence.Table;
 public class Movie {
     //Id
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // here adds the primary key constraint
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // can setup sequence
     private long id;
     //title
     @Column(name = "Title")
